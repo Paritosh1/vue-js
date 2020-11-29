@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>
+            learning event handling
+        </title>
+<script src ="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+
+    </head>
+
+    <body>
+<div id = "my-app">
+  <h2>  Counter: {{ Counter }}
+      </h2>
+<!-- 
+      <button type="button" name="button">Increment by 1</button> -->
+
+      <!-- we are going to create event on clicking -->
+      
+      <button type="button" @click="increment(1)" name="button"> Increment by 1</button>
+
+
+         <!-- we are going to create event on clicking -->
+         
+      <!-- <button type="button" name="button"> Decrement by 1</button> -->
+
+         <!-- <button type="button" v-on:click="decrement(1)" name="button"> Decrement by 1</button> -->
+<!-- /event modifiers -->
+
+         <button type="button" v-on:click.once="decrement(1)" name="button"> Decrement by 1</button>                                                                                                                                                                                                                                                                                                                                                                               
+
+
+         <!-- for double click event -->
+         <button type="button" @dblclick="increment(5)" name="button"> Increment by 5</button>
+         <button type="button" v-on:dblclick="decrement(5)" name="button"> Decrement by 5</button>
+
+
+
+         <div v-html="content">
+
+<!-- mouseover and mouse out event -->
+            <div class="move-area" @mousemove="movefunction" style="height: 200px; width: 200px; border: 1px solid black;"></div>
+         </div>
+</div>
+
+
+<script src="script.js"></script>
+
+    </body>
+
+</html>
