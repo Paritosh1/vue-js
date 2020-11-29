@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            getter setter
+        </title>
+<script src ="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+
+    </head>
+
+    <body>
+<div id = "my-app">
+
+<!-- getter setter method -->
+
+
+FirstName:<input type="text" placeholder="Enter first name" v-model="fname"><br/>
+
+LastName:<input type="text" placeholder="Enter last name" v-model="lname"><br/>
+
+<h2> Fullname: {{ fullname }} </h2>
+
+
+<h3><input type="text"  v-model="fullname"></h3>
+<p>channel name: {{  channel }}</p>
+<br/></br>
+
+<!-- references: concept of references -->
+Name:<input type="text" placeholder="Enter first name" ref="textname"><br/>
+
+Email:<input type="text" placeholder="Enter first name" ref="textmail"><br/>
+<button type="button" value="button" @click="btnsubmit">Submit</button>
+</div>
+
+
+<script src="get.js"></script>
+
+    </body>
+ 
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            key handling
+        </title>
+<script src ="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+
+    </head>
+
+    <body>
+<div id = "my-app">
+<!-- keypressed event -->
+<input type = "text" placeholder="key press" @keypress="keypressfunction">
+
+<br/> 
+
+<!-- <form>
+    <input type="text" v-model="name" placeholder="Name">{{ name }} </br>
+    <input type="text" v-model="email" placeholder="Email">{{ email }} </br>
+
+
+</form> -->
+
+
+<br/>
+<!-- 
+{{ character }} -->
+
+<input type = "text" placeholder="keyup" @keyup="keyupfunction">
+<br/>
+<input type = "text" placeholder="keydown"  @keydown="keydownfun">
+
+
+
+<script src="keypr.js"></script>
+
+    </body>
+ 
+</html> 

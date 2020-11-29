@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>learning vue js</title>
+<style>
+    .fixImageSize{
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+
+</head>
+
+<body>
+
+
+<div id="my-app">
+<h3>My firstname is : {{ fname }} and lastname is {{ lname }} .
+</h3>
+<p>my created  method is run : {{ run( 'you','tube' ) }}</p>
+<p>{{ welcome("afternoon") }}</p>
+<p>{{ valueAccess () }}</p>
+
+<a v-bind:href="ulink">{{ linkname }}</a><br>
+
+<!-- <img v-bind:src="imagelink" style="widows: 200px; height: 250px;">  -->
+
+<!-- fix image size using dynamically -->
+<img v-bind:src="imagelink" v-bind:class="{fixImageSize:isActive}"> <br>
+
+<!-- forms using post method -->
+
+<!-- we are going to bind these values with our dynamic values-->
+<form method="post">
+    <input type="text" v-bind:value="textName" placeholder="Name">
+    <input type="text" v-bind:value="emailId" placeholder="Email">
+    <button type="button" name="button">Submit</button>
+
+</form>
+
+
+<!-- html content binding -->
+<div v-html="htmlContent">
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+<script src="external.js"></script>
+
+
+</body>
+</html>

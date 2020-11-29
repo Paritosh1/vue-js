@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            mouse handling
+        </title>
+<script src ="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+
+    </head>
+
+    <body>
+<div id = "my-app">
+
+         <!-- <div v-html="content"> -->
+
+<!-- mouseover and mouse out event -->
+ <div class="move-area" @mousemove="movefunction" style="height: 200px; width: 200px; border: 1px solid black;">
+ 
+ <!-- we want to update x and y in our <div> area -->
+ <span>{{ x }}, {{ y }}</span>   
+</div>
+ <br/>
+ <!-- mouseover event -->
+
+ <button type="button" @mouseover="overfunction" name="button">Mouseover</button>
+ <button type="button" @mouseout="outfunction" name="button">Mouseout</button>
+</div>
+
+
+<script src="mouseev.js"></script>
+
+    </body>
+
+</html>

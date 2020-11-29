@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            computed property
+        </title>
+<script src ="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+
+
+<style>
+   /* some css style on toggle button of class redclass  */
+   button.redClass{
+       background: red;
+       border: 1px solid red;
+       color:white;
+       
+   }
+
+</style>
+
+    </head>
+
+    <body>
+<div id = "my-app">
+    {{ runme() }}
+</br>
+</br>
+
+<input type="text" placeholder="enter length" v-model="meter">
+<input type="text" placeholder="Enter name" v-model="fname">
+<input type="text" placeholder="Enter last name" v-model="lname">
+
+<h4>Full name: {{ getfullname }} </h4>
+<p>Length in cm converted: {{ convertToCentimeter }}</p>
+
+</br>
+<!-- to bind a class -->
+
+<button type="button" v-bind:class="{redClass:isActive}">Toggle class</button><br/>
+<!-- <button type="button" v-bind-class = "blueClass:true">Extra class</button> -->
+
+<br/> 
+
+<input type="text" name="text" placeholder="enter name" 
+
+<button type="button" @click = "incrementCountValue">Increment by 1</button>
+
+
+<h4>Count : {{ count }} </h4>
+<!-- if and else condition -->
+
+<p v-if="count==1">This value is = 1</p>
+<p v-else-if="count==2">This value is = 2</p>
+<p v-else-if="count==3">This value is = 3</p>
+<p v-else>Not a single value is matched and else statement is executed</p>
+
+
+<!-- for loop -->
+<ul>
+    <li v-for="teacher in teachers">{{ teacher.name }} - {{ teacher.subject }}  </li>
+
+</ul>
+
+<ul>
+    <li v-for="teacher in teachers"> 
+{{teacher.name }} teaches {{ teacher.subject}} from {{ teacher.location.street}} to city: {{ teacher.location.colony }} </li>
+</ul>
+
+
+</div>
+
+
+
+<script src="cp.js"></script>
+
+    </body>
+ 
+</html> 
